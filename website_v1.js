@@ -52,10 +52,16 @@ function visKunstnere() {
             klon.querySelector(".type").textContent = kunstner.type;
             klon.querySelector(".face").textContent = kunstner.face;
             klon.querySelector(".aktiv").textContent = kunstner.aktiv;
+            klon.querySelector(".bestemt_kunstner").addEventListener("click", () => visDetaljer(kunstner));
 
            destination.appendChild(klon);
         }
     })
 
+}
+
+function visDetaljer(hvad) {
+    console.log("visDetaljer");
+     location.href = `detalje.html?id=${hvad._id}`;
 }
 

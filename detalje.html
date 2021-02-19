@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="robots" content="noindex">
+    <title>Detalje</title>
+    <link rel="stylesheet" href="website_v1.css">
+</head>
+
+<body>
+
+   <main>
+       <article class="bestemt_kunstner">
+               <img src="" alt="" class="billede">
+               <h2 class="navn"></h2>
+               <h3 class="type"></h3>
+               <p class="face"></p>
+               <p class="genre"></p>
+               <p class="aktiv"></p>
+               <p class="beskrivelse-kort"></p>
+               <p class="beskrivelse-lang"></p>
+               <p class="spotify"></p>
+               <p class="_id"></p>
+
+               <button>TILBAGE</button>
+
+           </article>
+   </main>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
+
+        // const header = document.querySelector("header h1");
+        let kunstnere;
+        const medieurl = "music-15e1.restdb.io/media/";
+        const myHeaders = {
+            "x-apikey": "602e6d4d5ad3610fb5bb6329"
+        }
+
+        console.log("ID", id);
+        document.addEventListener("DOMContentLoaded", loadJSON);
+
+        async function loadJSON() {
+            console.log("loadJSON");
+            const JSONData = await fetch(`https://music-15e1.restdb.io/rest/music/${id}`, {
+                headers: myHeaders
+            });
+            kunstnere = await JSONData.json();
+            console.log("Kunstnere", kunstnere);
+            visKunstnere(kunstnere);
+        }
+
+        function visKunstnere() {
+           document.querySelector(".navn").textContent = kunstnere.navn;
+            document.querySelector(".type").textContent = kunstnere.type;
+            document.querySelector(".face").textContent = kunstnere.face;
+            document.querySelector(".aktiv").textContent = kunstnere.aktiv;
+
+
+            document.querySelector("button").addEventListener("click", tilbageTilForside);
+        }
+
+        function tilbageTilForside() {
+            console.log("tilbageTilForside");
+            history.back();
+        }
+    </script>
+</body>
+</html>
