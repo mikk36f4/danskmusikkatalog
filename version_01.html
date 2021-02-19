@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persongalleri</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #liste {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 1em;
+            margin: 2em;
+        }
+
+        .person {
+            padding: 1em;
+            border: 1px solid;
+            border-radius: 1em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section id="liste"></section>
+
+    <template>
+        <article class="person">
+            <img src="" alt="" class="billede">
+            <h2 class="navn"></h2>
+            <p class="type"></p>
+        </article>
+    </template>
+
+    <script>
+        const url = "https://music-15e1.restdb.io/rest/music";
+        const medieurl = "http://placeimg.com/400/400/any";
+        const options = {
+            headers: {
+                'x-apikey': "602e6d4d5ad3610fb5bb6329"
+            }
+        };
+
+        async function hentData() {
+            const resspons = await fetch(url, options);
+            const menu = await resspons.json();
+            vis(menu);
+        }
+
+        function vis(menu) {
+            const list = document.querySelector("#liste");
+            const template = document.querySelector("template").content;
+            liste.innerHTML = "";
+
+            // Her regner vi med alt er fjernet.
+
+            menu.forEach(music => {
+                const klon = template.cloneNode(true);
+                klon.querySelector(".billede").src = medieurl + music.billede;
+                klon.querySelector(".navn").textContent = music.navn;
+                klon.querySelector(".type").textContent = music.type;
+                list.appendChild(klon);
+            })
+        }
+        hentData();
+
+    </script>
+</body>
+
+</html>
