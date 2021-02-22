@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex">
     <title>Detalje</title>
-    <link rel="stylesheet" href="website_v1.css">
-        <link rel="stylesheet" href="detalje.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="detalje.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-   <div class="logo">
+    <nav id="nav_menu">
         <a href="website_v1.html"> <img src="logo_sorthvid.svg" alt="">
         </a>
-    </div>
+        <p class="nav_nav">Musik</p>
+        <p class="nav_nav">Om os</p>
+        <p class="nav_nav">Kontakt</p>
+        <!--
+        <div class="logo">
+            <img src="logo_sorthvid.svg" alt="">
+        </div>
+-->
+    </nav>
 
-   <main>
-       <article class="bestemt_kunstner">
-<!--               <img src="" alt="" class="billede">-->
+    <header>
+        <h1>DANSK MUSIK KATALOG</h1>
+    </header>
+
+    <main>
+        <article class="bestemt_kunstner">
+            <!--               <img src="" alt="" class="billede">-->
+
+            <div id=colleft>
+                <img src="placeholder.jpg">
+            </div>
+            <div id="colright">
+                <h2 class="navn">ARTIST INDLÆSES...</h2>
+                <h3 class="type"></h3>
+                <p class="face"></p>
+                <p class="aktiv"></p>
+                <p class="beskrivelse-kort"></p>
+                <br>
+                <p class="beskrivelse-lang">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, eligendi eum illo autem temporibus soluta explicabo est facilis, nostrum, doloribus dolor! Iusto recusandae, placeat ab amet cum deleniti quo nihil reiciendis nostrum, qui tempore quae! Impedit vitae temporibus, consequuntur maxime. Harum nihil repellat eum aut sunt possimus, voluptatum nulla. Velit.</p>
+                <p class="spotify"></p>
+                <p class="_id"></p>
+            </div>
+
+            <div id="topright">
+                <p class="genre"></p>
+            </div>
 
 
-              <img src="placeholder.jpg">
-               <h2 class="navn">ARTIST INDLÆSES...</h2>
-               <h3 class="type"></h3>
-               <p class="face"></p>
-               <p class="genre"></p>
-               <p class="aktiv"></p>
-               <p class="beskrivelse-kort"></p>
-               <p class="beskrivelse-lang"></p>
-               <p class="spotify"></p>
-               <p class="_id"></p>
+            <button>TILBAGE</button>
 
-
-               <button>TILBAGE</button>
-
-           </article>
-   </main>
+        </article>
+    </main>
     <script>
-    const urlParams = new URLSearchParams(window.location.search);
+        const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
 
         // const header = document.querySelector("header h1");
@@ -65,10 +84,12 @@
         }
 
         function visKunstnere() {
-           document.querySelector(".navn").textContent = kunstnere.navn;
+            document.querySelector(".navn").textContent = kunstnere.navn;
             document.querySelector(".type").textContent = kunstnere.type;
             document.querySelector(".face").textContent = kunstnere.face;
             document.querySelector(".aktiv").textContent = kunstnere.aktiv;
+                        document.querySelector(".genre").textContent = kunstnere.genre;
+
 
 
             document.querySelector("button").addEventListener("click", tilbageTilForside);
@@ -78,6 +99,8 @@
             console.log("tilbageTilForside");
             history.back();
         }
+
     </script>
 </body>
+
 </html>
