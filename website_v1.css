@@ -45,6 +45,7 @@ article {
 article:hover {
     color: #c5cae2;
     background-color: aliceblue;
+    cursor: pointer;
 }
 
 h1 {
@@ -56,6 +57,10 @@ h1 {
     font-family: 'Space Mono', monospace;
 
 
+}
+
+.logo {
+    text-align: center;
 }
 
 h2 {

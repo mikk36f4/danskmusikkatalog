@@ -11,8 +11,7 @@ img {
     border-radius: 2rem;
 }
 
-logo {
-    position: fixed;
- left: 10rem;
+.logo {
+    text-align: center;
 }
 
