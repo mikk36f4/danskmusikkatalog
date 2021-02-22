@@ -27,6 +27,15 @@ main {
 
 }
 
+
+nav a img {
+    width: 4rem;
+    filter: grayscale(100%);
+
+}
+
+
+}
 article {
 
     padding: 10px;
@@ -45,9 +54,14 @@ article:hover {
 h1 {
     font-family: 'Space Mono', monospace;
     text-align: center;
-    font-weight: 200;
+    font-weight: 2000;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 5rem;
+    background-image: url(billeder/billede_01.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 23rem;
+    color: white;
 }
 
 h2 {
@@ -103,7 +117,7 @@ img {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     /*    padding: 10px;*/
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -174,8 +188,13 @@ h4 {
 }
 
 .nav_nav {
+    position: relative;
+    top: 0.9rem;
     display: flex;
     margin: 0 auto;
+    float: right;
+        font-family: 'Roboto', sans-serif;
+
 }
 
 #nav_knapper {
