@@ -43,13 +43,11 @@ article:hover {
 }
 
 h1 {
+    font-family: 'Space Mono', monospace;
     text-align: center;
     font-weight: 200;
     padding-bottom: 20px;
     padding-top: 20px;
-    color: #21213F;
-
-
 }
 
 h2 {
@@ -235,133 +233,3 @@ footer {
     height: 50px;
     background-color: #232323;
 }
-
-/*
-* {
-    box-sizing: border-box;
-    grid-gap: 10px;
-    font-family: Acumin Pro SemiCondensed;
-    margin: 0;
-
-}
-
-
-img {
-    width:
-        200px;
-    object-fit: cover;
-
-
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    font-weight: 300;
-    padding-bottom: 200px;
-
-}
-
-body {
-    background-color: rgb(255, 255, 255);
-
-}
-
-article {
-
-    padding: 10px;
-
-    color: black;
-    background-color: rgba(128, 128, 128, 0.1);
-
-
-}
-
-article:hover {
-    color: #c5cae2;
-    background-color: aliceblue;
-    cursor: pointer;
-}
-
-h1 {
-    text-align: center;
-    font-weight: 200;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    color: #21213F;
-    font-family: 'Space Mono', monospace;
-
-
-}
-
-.logo {
-    text-align: center;
-}
-
-h2 {
-
-    padding-top: 8px;
-        font-family: 'Space Mono', monospace;
-
-
-}
-
-h3 {
-        font-family: 'Space Mono', monospace;
-
-}
-p {
-    font-family: 'Roboto', sans-serif;
-
-}
-
-nav {
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.valgt {
-    background-color: #c5cae2;
-}
-
-
-
-article p {
-    padding-top: 4px;
-
-}
-
-article img {
-    border-radius: 10rem;
-}
-
-button {
-    background-color: deeppink;
-    border: 0;
-    padding: 10px 20px;
-    color: aliceblue;
-    border-radius: 2rem;
-        font-family: 'Roboto', sans-serif;
-
-
-}
-
-button:hover {
-    background-color: white;
-    color: #c5cae2;
-}
-
-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 60px;
-    background-color: #c5cae2;
-    color: aliceblue;
-
-
-}
-*/
