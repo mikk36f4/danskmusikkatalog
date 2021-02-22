@@ -3,10 +3,16 @@ body {
 }
 
 article {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    background-color: rgba(128, 128, 128, 0.1);
+
 }
 
 img {
     border-radius: 2rem;
 }
+
+logo {
+    position: fixed;
+ left: 10rem;
+}
+
