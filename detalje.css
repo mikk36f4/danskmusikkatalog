@@ -3,11 +3,10 @@ body {
 }
 
 article {
- position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
 
-
+img {
+    border-radius: 2rem;
 }
