@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", start)
 let kunstnere;
 let filtrer = "alle";
 
-
-
 function start() {
     console.log("start");
     const filtrerKnapper = document.querySelectorAll("nav button");
@@ -27,7 +25,6 @@ function filtrerKunstnere() {
     header.textContent = this.textContent;
 }
 
-
 async function loadJSON() {
     console.log("loadJSON");
     const JSONData = await fetch("https://music-15e1.restdb.io/rest/music", {
@@ -40,19 +37,20 @@ async function loadJSON() {
 
 function visKunstnere() {
     console.log("visKunstnere");
-    const destination = document.querySelector("main");
+    const destination = document.querySelector("#liste");
     const skabelon = document.querySelector("template").content;
-    destination.textContent = "";
+    destination.innerHTML = "";
     kunstnere.forEach(kunstner => {
-        console.log("genre", kunstner.genre);
+        console.log("klon");
 
         if (filtrer == kunstner.genre || filtrer == "alle") {
             const klon = skabelon.cloneNode(true);
             klon.querySelector(".navn").textContent = kunstner.navn;
+            klon.querySelector(".beskrivelse-kort").textContent = kunstner.beskrivelsekort;
             //            klon.querySelector(".type").textContent = kunstner.type;
             //            klon.querySelector(".face").textContent = kunstner.face;
             //            klon.querySelector(".aktiv").textContent = kunstner.aktiv;
-            klon.querySelector(".bestemt_kunstner").addEventListener("click", () => visDetaljer(kunstner));
+            klon.querySelector(".loop").addEventListener("click", () => visDetaljer(kunstner));
 
             destination.appendChild(klon);
         }

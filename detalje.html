@@ -1,64 +1,55 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>Detalje</title>
-    <link rel="stylesheet" href="detalje.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav id="nav_menu">
-        <a href="website_v1.html"> <img src="logo_sorthvid.svg" alt="">
-        </a>
-        <p class="nav_nav">Musik</p>
-        <p class="nav_nav">Om os</p>
-        <p class="nav_nav">Kontakt</p>
-        <!--
-        <div class="logo">
-            <img src="logo_sorthvid.svg" alt="">
-        </div>
--->
+    <nav id="top">
+        <p>Musik</p>
+        <p>Om os</p>
+        <p>Kontakt</p>
     </nav>
 
     <header>
+        <a href="index.html">
+        </a>
         <h1>DANSK MUSIK KATALOG</h1>
     </header>
 
-    <main>
-        <article class="bestemt_kunstner">
-            <!--               <img src="" alt="" class="billede">-->
+    <div class="single">
+        <div id=colleft>
+            <img src="http://placeimg.com/400/400/any" alt="IMG">
+            <p class="spotify"></p>
+        </div>
+        <div id="colright">
+            <h2 class="navn">Kunstner INDLÆSES...</h2>
+            <h3 class="type"></h3>
+            <p class="face"></p>
+            <p class="aktiv"></p>
+            <br>
+            <p class="beskrivelse-lang"></p>
+            <p class="_id"></p>
+        </div>
 
-            <div id=colleft>
-                <img src="placeholder.jpg">
-            </div>
-            <div id="colright">
-                <h2 class="navn">ARTIST INDLÆSES...</h2>
-                <h3 class="type"></h3>
-                <p class="face"></p>
-                <p class="aktiv"></p>
-                <p class="beskrivelse-kort"></p>
-                <br>
-                <p class="beskrivelse-lang">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, eligendi eum illo autem temporibus soluta explicabo est facilis, nostrum, doloribus dolor! Iusto recusandae, placeat ab amet cum deleniti quo nihil reiciendis nostrum, qui tempore quae! Impedit vitae temporibus, consequuntur maxime. Harum nihil repellat eum aut sunt possimus, voluptatum nulla. Velit.</p>
-                <p class="spotify"></p>
-                <p class="_id"></p>
-            </div>
+        <div id="topright">
+            <p class="genre"></p>
+        </div>
+        <button>TILBAGE</button>
 
-            <div id="topright">
-                <p class="genre"></p>
-            </div>
+    </div>
 
+    <footer></footer>
 
-            <button>TILBAGE</button>
-
-        </article>
-    </main>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
@@ -84,11 +75,13 @@
         }
 
         function visKunstnere() {
+            document.querySelector(".spotify").textContent = kunstnere.spotify;
             document.querySelector(".navn").textContent = kunstnere.navn;
             document.querySelector(".type").textContent = kunstnere.type;
             document.querySelector(".face").textContent = kunstnere.face;
             document.querySelector(".aktiv").textContent = kunstnere.aktiv;
-                        document.querySelector(".genre").textContent = kunstnere.genre;
+            document.querySelector(".beskrivelse-lang").textContent = kunstnere.beskrivelselang;
+            document.querySelector(".genre").textContent = kunstnere.genre;
 
 
 

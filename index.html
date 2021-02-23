@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Dansk musik katalog</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="sticky">
+        <nav id="top">
+            <p>Musik</p>
+            <p>Om os</p>
+            <p>Kontakt</p>
+        </nav>
+
+        <header>
+            <a href="index.html">
+            </a>
+            <h1>DANSK MUSIK KATALOG</h1>
+        </header>
+
+        <h2>Velkommen til en verden fuld af <span>fantastisk dansk musik</span>.</h2>
+
+        <h2>Vælg en genre</h2>
+        <nav id="genre">
+            <button data-genre="alle" class="valgt">Alle</button>
+            <button data-genre="Rock">Rock</button>
+            <button data-genre="Pop">Pop</button>
+            <button data-genre="HipHop">HipHop</button>
+            <button data-genre="Rap">Rap</button>
+            <button data-genre="Heavy Metal">Metal</button>
+        </nav>
+        <div id="genre_tag_div">
+            <h3 class="genre_tag">Alle</h3>
+        </div>
+    </div>
+
+    <section id="liste"></section>
+
+    <template>
+        <article class="loop">
+            <img src="http://placeimg.com/400/400/any" alt="IMG" class="billede">
+            <h3 class="navn"></h3>
+            <p class="beskrivelse-kort"></p>
+            <p class="se-mere">Se mere</p>
+        </article>
+    </template>
+
+    <footer></footer>
+
+    <script src="index.js"></script>
+</body></html>
