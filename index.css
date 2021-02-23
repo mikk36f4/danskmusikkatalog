@@ -28,6 +28,8 @@ img {
     max-width: 400px;
     max-height: 400px;
     border-radius: 15rem;
+    background-color: lightgrey;
+    background-size: 200 rem;
 }
 
 #sticky {
@@ -36,6 +38,13 @@ img {
     width: 100%;
     background-color: white;
 }
+
+buttons {
+    position: inherit;
+    top: -10rem;
+}
+
+
 
 topright {
     padding-top: 2rem;
@@ -66,18 +75,35 @@ topright {
     display: flex;
 }
 
+#genre {
+    display: block;
+    position: relative;
+    top: -6rem;
+}
+
 #top p {
     margin: auto;
     text-transform: uppercase;
 }
 
+nav {
+    position: inherit;
+    top: -50rem;
+}
+
 /* header */
 
 header {
-    height: 22vh;
-    background-image: url(IMG/Header.jpg);
-    background-position: center;
-    background-size: 800px;
+   height: 60vh;
+        background-image: url(IMG/header.jpg);
+        background-size: cover;
+        background-position: center;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 /* Genre nav */
@@ -94,7 +120,7 @@ button {
     text-transform: uppercase;
     background-color: #F3F3F3;
     border: 0;
-    border-bottom: 6px solid #C7C7C7;
+    border-bottom: 3px solid #C7C7C7;
     border-radius: 50px;
     width: 80px;
     height: 30px;
@@ -126,9 +152,11 @@ button:hover {
 }
 
 article {
-    background-color: lightpink;
+/*    background-color: lightpink;*/
     border-radius: 20% 20% 10% 10%;
     cursor: pointer;
+    position: relative;
+    top: -37rem;
 }
 
 article:hover {
@@ -165,7 +193,8 @@ colleft img {
 }
 
 .single {
-    padding-top: 5rem;
+    position: relative;
+    padding-top: 0rem;
     padding: 50px;
     border-radius: 5rem;
     color: black;
@@ -174,6 +203,8 @@ colleft img {
     grid-template-columns: 1fr 1fr 0.3fr;
     grid-column-gap: 10rem;
     background-color: rgb(255, 255, 255);
+    top: -8rem;
+
 }
 
 /* footer */
@@ -191,10 +222,11 @@ colleft img {
 
 @media only screen and (min-width: 800px) {
 
+
     h1 {
         width: 100%;
-        padding-top: 15vh;
-        letter-spacing: 0.3em;
+        padding-top: 13vh;
+        letter-spacing: 1rem;
     }
 
     #top {
@@ -207,13 +239,20 @@ colleft img {
     }
 
     header {
-        height: 40vh;
+        height: 60vh;
+        background-image: url(IMG/header.jpg);
         background-size: cover;
+        background-position: center;
+
 
     }
 
     article p {
         width: 400px;
+    }
+
+    article img {
+        width: 20rem;
     }
 
 }
