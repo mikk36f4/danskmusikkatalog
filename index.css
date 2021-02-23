@@ -27,7 +27,7 @@ p {
 img {
     max-width: 400px;
     max-height: 400px;
-    border-radius: 20% 20% 0% 0%;
+    border-radius: 15rem;
 }
 
 #sticky {
@@ -142,18 +142,20 @@ article p {
 
 colleft img {
     width: 50rem;
+        border-radius: 5rem;
+
 }
 
 .single {
     padding-top: 5rem;
     padding: 50px;
-    border-radius: 100px;
+    border-radius: 5rem;
     color: black;
     cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 1fr 0.3fr;
     grid-column-gap: 10rem;
-    background-color: lightpink;
+    background-color: rgb(255, 255, 255);
 }
 
 /* footer */
