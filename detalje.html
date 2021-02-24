@@ -13,43 +13,58 @@
 </head>
 
 <body>
-
     <nav id="top">
-        <p>Musik</p>
+        <img src="IMG/logo.png" alt="logo">
+        <p>DesignGuide</p>
         <p>Om os</p>
         <p>Kontakt</p>
     </nav>
 
     <header>
         <a href="index.html">
+            <h1>DANSK MUSIK KATALOG</h1>
         </a>
-        <h1>DANSK MUSIK KATALOG</h1>
     </header>
 
-    <div class="single">
-        <div id=colleft>
-            <img src="http://placeimg.com/400/400/any" alt="IMG">
-            <p class="spotify"></p>
-        </div>
-        <div id="colright">
-            <h2 class="navn">Kunstner INDLÆSES...</h2>
-            <h3 class="type"></h3>
-            <p class="face"></p>
-            <p class="aktiv"></p>
-            <br>
-            <p class="beskrivelse-lang"></p>
-            <p class="_id"></p>
-        </div>
+    <div id="main">
+        <div class="single">
+            <div id=colleft>
+                <img src="" alt="IMG" class="billede">
+                <div id="spot">
+                    <p>Mød dem på</p><a class="spotify">SPOTIFY</a>
+                </div>
+            </div>
 
-        <div id="topright">
-            <p class="genre"></p>
+            <div id="colright">
+                <h2 class="navn">Kunstner INDLÆSES...</h2>
+                <h3 class="type"></h3>
+                <p class="face"></p>
+                <p class="aktiv"></p>
+                <br>
+                <p class="beskrivelse-lang"></p>
+                <p class="_id"></p>
+            </div>
+
+            <div id="topright">
+                <div id="rund">
+                    <p class="genre"></p>
+                </div>
+            </div>
+            <button id="back">TILBAGE</button>
         </div>
-        <button>TILBAGE</button>
-
-
     </div>
 
-    <footer></footer>
+    <footer>
+        <div class="col1">
+            <img src="IMG/logo.png" alt="logo">
+        </div>
+        <div class="col2">
+            <h3>Om os</h3>
+        </div>
+        <div class="col3">
+            <h3>Kontakt os</h3>
+        </div>
+    </footer>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -57,7 +72,7 @@
 
         // const header = document.querySelector("header h1");
         let kunstnere;
-        const medieurl = "music-15e1.restdb.io/media/";
+        const medieurl = "https://music-15e1.restdb.io/media/";
         const myHeaders = {
             "x-apikey": "602e6d4d5ad3610fb5bb6329"
         }
@@ -76,15 +91,14 @@
         }
 
         function visKunstnere() {
-            document.querySelector(".spotify").textContent = kunstnere.spotify;
+            document.querySelector(".billede").src = medieurl + kunstnere.img
+            document.querySelector(".spotify").href = kunstnere.spotify;
             document.querySelector(".navn").textContent = kunstnere.navn;
             document.querySelector(".type").textContent = kunstnere.type;
             document.querySelector(".face").textContent = kunstnere.face;
             document.querySelector(".aktiv").textContent = kunstnere.aktiv;
             document.querySelector(".beskrivelse-lang").textContent = kunstnere.beskrivelselang;
             document.querySelector(".genre").textContent = kunstnere.genre;
-
-
 
             document.querySelector("button").addEventListener("click", tilbageTilForside);
         }
@@ -93,8 +107,5 @@
             console.log("tilbageTilForside");
             history.back();
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
