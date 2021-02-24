@@ -2,30 +2,35 @@
 <html lang="da">
 
 <head>
-    <meta charset="utf-8">
+        <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <title>Dansk musik katalog</title>
+    <title>Detalje</title>
     <link rel="stylesheet" href="index.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
+    <link rel="icon" href="IMG/favicon.ico">
 </head>
 
 <body>
     <nav id="top">
         <img src="IMG/logo.png" alt="logo">
-        <p>DESIGNGUIDE</p>
-        <p>Om os</p>
-        <p>Kontakt</p>
+        <a href="designguide.html">
+            <p>Designguide</p>
+        </a>
+        <a href="#footer">
+            <p>Kontakt</p>
+        </a>
+        <a href="#footer">
+            <p>Om os</p>
+        </a>
     </nav>
 
     <header>
@@ -47,7 +52,6 @@
 
     <section id="liste"></section>
 
-
     <template>
         <article class="loop">
             <img src="img" alt="IMG" class="billede">
@@ -57,12 +61,13 @@
         </article>
     </template>
 
-    <footer>
-
+    <footer id="footer">
         <div class="col1">
             <br>
+            <a href="#top">
+                <img src="IMG/upp.png" alt="up" class="up">
+            </a>
             <img src="IMG/logo.png" alt="logo">
-
 
         </div>
         <div class="col2">
@@ -72,9 +77,8 @@
             <p>Vi kategoriserer og arkiverer danske kunstere igennem tiden, for at hylde deres musik. Baseret i Nordvest.</p>
             <br>
             <p>Copyright DMK 2021 ©</p>
+            <p>Album art Copyright Spotify 2021 ©</p>
             <br>
-
-
         </div>
 
         <div class="col3">
@@ -90,8 +94,5 @@
         <div></div>
 
     </footer>
-
     <script src="index.js"></script>
-</body>
-
-</html>
+</body></html>

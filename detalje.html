@@ -16,15 +16,22 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="IMG/favicon.ico">
+
 </head>
 
 <body>
     <nav id="top">
         <img src="IMG/logo.png" alt="logo">
-
-        <p>DesignGuide</p>
-        <p>Om os</p>
-        <p>Kontakt</p>
+        <a href="designguide.html">
+            <p>Designguide</p>
+        </a>
+        <a href="#footer">
+            <p>Kontakt</p>
+        </a>
+        <a href="#footer">
+            <p>Om os</p>
+        </a>
     </nav>
 
     <header>
@@ -40,7 +47,6 @@
 
 
             </div>
-
             <div id="colright">
                 <h2 class="navn">Kunstner INDLÆSES...</h2>
                 <h3 class="type"></h3>
@@ -56,7 +62,6 @@
                 <div id="rund">
                     <p class="genre"></p>
 
-
                 </div>
                 <br>
                 <div id="spot">
@@ -69,12 +74,14 @@
         </div>
     </div>
 
-    <footer>
+    <footer id="footer">
 
         <div class="col1">
             <br>
+            <a href="#top">
+                <img src="IMG/upp.png" alt="up" class="up">
+            </a>
             <img src="IMG/logo.png" alt="logo">
-
 
         </div>
         <div class="col2">
@@ -144,8 +151,5 @@
             console.log("tilbageTilForside");
             history.back();
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
