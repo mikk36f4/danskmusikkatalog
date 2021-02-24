@@ -196,15 +196,24 @@ colleft img {
 }
 
 #rund {
-    background-image: url(IMG/baggrundgenre.png);
-    background-position: center;
-    background-size: cover;
+    background-color: #f9ff65;
+    color: black;
+    width: 6vw;
     height: 8rem;
     width: 8rem;
+    border-radius: 20rem;
     font-family: 'Space Mono', monospace;
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 1.5em;
+    align-content: center;
+}
+
+
+
+#rund p {
+    padding-top: 8vh;
+      padding: 1.5rem;
 }
 
 .genre {
@@ -237,6 +246,7 @@ colleft img {
     font-weight: bolder;
     font-family: 'Space Mono', monospace;
     font-size: 1em;
+    padding-top: 0.5rem;
 }
 
 #spot a {
@@ -269,9 +279,8 @@ a:hover {
 footer {
     background-color: black;
     color: white;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
-    grid-column-gap: 10rem;
+    padding: 2rem;
+
 }
 
 footer a:link {
@@ -284,6 +293,12 @@ footer a:visited {
 
 footer img {
     width: 15rem;
+}
+
+.col4 {
+    display: flex;
+    text-align: center;
+    align-content: center;
 }
 
 /* Media Query */
@@ -336,5 +351,13 @@ footer img {
         background-color: none;
 
     }
+
+    footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10rem;
+}
 
 }
