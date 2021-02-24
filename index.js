@@ -1,13 +1,18 @@
-/* Database + API */
-const header = document.querySelector(".genre_tag");
+/* Database + API | Promise*/
 const medieurl = "https://music-15e1.restdb.io/media/";
 const myHeaders = {
     "x-apikey": "602e6d4d5ad3610fb5bb6329"
 }
 
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id")
+
+/* Kører funktionen "start" når DOM er loadet */
 document.addEventListener("DOMContentLoaded", start)
 let kunstnere;
+/* Nulstiller Genre | Viser alle genre */
 let filtrer = "alle";
+
 
 function start() {
     console.log("start");
@@ -18,7 +23,6 @@ function start() {
 
 function filtrerKunstnere() {
     console.log("filtrerKunstnere");
-
     filtrer = this.dataset.genre;
     document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
@@ -49,9 +53,6 @@ function visKunstnere() {
             klon.querySelector(".billede").src = medieurl + kunstner.img;
             klon.querySelector(".navn").textContent = kunstner.navn;
             klon.querySelector(".beskrivelse-kort").textContent = kunstner.beskrivelsekort;
-            //            klon.querySelector(".type").textContent = kunstner.type;
-            //            klon.querySelector(".face").textContent = kunstner.face;
-            //            klon.querySelector(".aktiv").textContent = kunstner.aktiv;
             klon.querySelector(".loop").addEventListener("click", () => visDetaljer(kunstner));
 
             destination.appendChild(klon);
