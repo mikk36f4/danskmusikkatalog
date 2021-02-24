@@ -14,31 +14,22 @@
 </head>
 
 <body>
-    <div id="sticky">
-        <nav id="top">
-            <p>Musik</p>
-            <p>Om os</p>
-            <p>Kontakt</p>
-        </nav>
+    <nav id="top">
+        <img src="IMG/logo.png" alt="logo">
+        <p>Musik</p>
+        <p>Om os</p>
+        <p>Kontakt</p>
+    </nav>
 
-        <header>
-            <a href="index.html">
-
+    <header>
+        <a href="index.html">
             <h1>DANSK MUSIK KATALOG</h1>
-            </a>
-            <br>
+        </a>
+    </header>
 
-
-            <!--        <h2 class ="genre_tag">Vælg en genre</h2>-->
-
-
-        </header>
-        <br>
-
-    </div>
     <nav id="genre">
         <h2>Velkommen til en verden fuld af <span>fantastisk dansk musik!</span></h2>
-        <br> <br>
+        <br><br>
         <button data-genre="alle" class="valgt">Alle</button>
         <button data-genre="Rock">Rock</button>
         <button data-genre="Pop">Pop</button>
@@ -47,23 +38,31 @@
         <button data-genre="Heavy Metal">Metal</button>
     </nav>
 
-
-
-
-
-
     <section id="liste"></section>
+
+    <footer>HEJ</footer>
 
     <template>
         <article class="loop">
-            <img src="http://placeimg.com/400/400/any" alt="IMG" class="billede">
+            <img src="" alt="IMG" class="billede">
             <h3 class="navn"></h3>
             <p class="beskrivelse-kort"></p>
             <p class="se-mere">Se mere</p>
         </article>
     </template>
 
-    <footer></footer>
+    <footer>
+        <div class="col1">
+            <img src="IMG/logo.png" alt="logo">
+        </div>
+        <div class="col2">
+            <h3>Om os</h3>
+        </div>
+
+        <div class="col3">
+            <h3>Kontakt os</h3>
+        </div>
+    </footer>
 
     <script src="index.js"></script>
 </body>

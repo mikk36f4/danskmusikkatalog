@@ -1,5 +1,6 @@
+/* Database + API */
 const header = document.querySelector(".genre_tag");
-const medieurl = "music-15e1.restdb.io/media/";
+const medieurl = "https://music-15e1.restdb.io/media/";
 const myHeaders = {
     "x-apikey": "602e6d4d5ad3610fb5bb6329"
 }
@@ -45,6 +46,7 @@ function visKunstnere() {
 
         if (filtrer == kunstner.genre || filtrer == "alle") {
             const klon = skabelon.cloneNode(true);
+            klon.querySelector(".billede").src = medieurl + kunstner.img;
             klon.querySelector(".navn").textContent = kunstner.navn;
             klon.querySelector(".beskrivelse-kort").textContent = kunstner.beskrivelsekort;
             //            klon.querySelector(".type").textContent = kunstner.type;
