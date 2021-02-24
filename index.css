@@ -8,20 +8,32 @@
 
 h1 {
     text-align: center;
-    font-family: 'Monoton', cursive;
+    color: #FFFEFE;
+    font-family: 'Roboto', sans-serif;
     width: 250px;
 }
 
+h1:hover {
+    color: black;
+}
+
 h2 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 80px;
+    font-weight: 400;
+    font-size: 5vw;
+    color: #535353;
+    text-align: left;
+    padding: 30px;
 }
 
 h3 {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 /* top nav */
@@ -40,22 +52,24 @@ nav {
 }
 
 #top {
-    height: 8vh;
-    background-color: black;
+    height: 6vh;
+    background-color: #000000;
     color: white;
     display: flex;
 }
 
 #top p {
-    padding: 2vw;
-    text-transform: uppercase;
+    padding-top: 3.5vw;
+    color: #E6E6E6;
+    /*    text-transform: uppercase;*/
+}
+
+#top a {
+    text-decoration: none;
 }
 
 #top img {
-    height: 100%;
-    width: 100px;
-    float: left;
-    padding-left: 10px;
+    display: none;
 }
 
 /* header */
@@ -82,6 +96,12 @@ span {
     color: transparent;
 }
 
+.vaelg_en_genre {
+    font-family: 'Space Mono', monospace;
+    color: #535353;
+    padding-bottom: 4vw;
+}
+
 #genre {
     display: block;
     position: relative;
@@ -90,14 +110,14 @@ span {
 
 button {
     font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
+    font-weight: 100;
     text-transform: uppercase;
     background-color: #F3F3F3;
     border: 0;
     border-bottom: 3px solid #C7C7C7;
     border-radius: 50px;
     width: 90px;
-    height: 40px;
+    height: 25px;
     margin: 2px;
     cursor: pointer;
 }
@@ -119,7 +139,8 @@ button:hover {
 
 #liste {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-auto-rows: 1fr;
     grid-gap: 20px;
     margin-top: 600px;
 }
@@ -141,7 +162,7 @@ article {
 
 article:hover {
     color: #c5cae2;
-    background-color: aliceblue;
+    background-color: none;
 }
 
 article p {
@@ -283,18 +304,21 @@ a:hover {
 /* footer */
 
 footer {
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #E6E6E6;
     padding: 2rem;
+}
 
+footer p {
+    font-family: 'Roboto', sans-serif;
 }
 
 footer a:link {
-    color: white;
+    color: #E6E6E6;
 }
 
 footer a:visited {
-    color: white;
+    color: #E6E6E6;
 }
 
 footer img {
@@ -302,8 +326,8 @@ footer img {
 }
 
 .up {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 50px;
+    max-width: 50px;
 }
 
 .col4 {
@@ -322,13 +346,31 @@ footer img {
         letter-spacing: 1rem;
     }
 
+    h2 {
+        font-size: 2vw;
+        text-align: center;
+        padding-bottom: 7vw;
+    }
+
+    .vaelg_en_genre {
+        padding-bottom: 2vw;
+    }
+
     #top {
         display: inherit;
     }
 
     #top p {
         float: right;
-        padding: 1.2vw 1.2vw;
+        padding: 1vw 1vw;
+    }
+
+    #top img {
+        display: unset;
+        height: 100%;
+        width: 100px;
+        float: left;
+        padding-left: 10px;
     }
 
     header {
@@ -336,7 +378,6 @@ footer img {
         background-image: url(IMG/header.jpg);
         background-size: cover;
         background-position: center;
-
     }
 
     article p {
@@ -370,8 +411,6 @@ footer img {
     }
 
     footer {
-        background-color: black;
-        color: white;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 10rem;
