@@ -196,14 +196,15 @@ colleft img {
     position: relative;
     padding-top: 0rem;
     padding: 50px;
-    border-radius: 5rem;
+    border-radius: 50rem;
     color: black;
     cursor: pointer;
     display: grid;
-    grid-template-columns: 1fr 1fr 0.3fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 10rem;
     background-color: rgb(255, 255, 255);
     top: -8rem;
+    background-color: none;
 
 }
 
@@ -254,5 +255,21 @@ colleft img {
     article img {
         width: 20rem;
     }
+
+    .single {
+    position: relative;
+    padding-top: 0rem;
+    padding: 50px;
+    border-radius: 50rem;
+    color: black;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.3fr;
+    grid-column-gap: 10rem;
+    background-color: rgb(255, 255, 255);
+    top: -8rem;
+    background-color: none;
+
+}
 
 }
