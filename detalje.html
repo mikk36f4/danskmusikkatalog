@@ -10,12 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+
     <link rel="icon" href="IMG/favicon.ico">
 
 </head>
@@ -23,7 +18,7 @@
 <body>
     <nav id="top">
         <img src="IMG/logo.png" alt="logo">
-        <a href="designguide.html">
+        <a href="Design%20Guide.pdf">
             <p>Designguide</p>
         </a>
         <a href="#footer">
@@ -40,47 +35,44 @@
         </a>
     </header>
 
-    <div id="main">
-        <div class="single">
-            <div id=colleft>
-                <img src="IMG/loading.png" alt="IMG" class="billede">
+    <div class="single">
+        <div id=colleft>
+            <img src="IMG/loading.png" alt="IMG" class="billede">
 
-
-            </div>
-            <div id="colright">
-                <h2 class="navn">Kunstner INDLÆSES...</h2>
-                <h3 class="type"></h3>
-                <p class="face"></p>
-                <p class="aktiv"></p>
-                <br>
-                <p class="beskrivelse-lang"></p>
-                <p class="_id"></p>
-            </div>
-
-            <div id="topright">
-                <br>
-                <div id="rund">
-                    <p class="genre"></p>
-
-                </div>
-                <br>
-                <div id="spot">
-                    <br>
-                    <p> <a class="spotify"> Spotify</a> </p>
-                </div>
-            </div>
-
-            <button id="back">TILBAGE</button>
         </div>
+        <div id="colright">
+            <h2 class="navn">Kunstner INDLÆSES...</h2>
+            <p class="type"></p>
+            <p class="face"></p>
+            <p class="aktiv"></p>
+            <br>
+            <p class="beskrivelse-lang"></p>
+            <p class="_id"></p>
+        </div>
+
+        <div id="topright">
+            <br>
+            <div id="rund">
+                <p class="genre"></p>
+
+            </div>
+            <br>
+            <div id="spot">
+                <br>
+                <p> <a class="spotify"> Spotify</a> </p>
+            </div>
+        </div>
+
+        <button id="back">TILBAGE</button>
     </div>
 
     <footer id="footer">
-
         <div class="col1">
             <br>
             <a href="#top">
                 <img src="IMG/upp.png" alt="up" class="up">
             </a>
+            <p>Up Top</p>
             <img src="IMG/logo.png" alt="logo">
 
         </div>
@@ -92,8 +84,6 @@
             <br>
             <p>Copyright DMK 2021 ©</p>
             <br>
-
-
         </div>
 
         <div class="col3">
@@ -105,25 +95,23 @@
             <p>Telefon: +45 30 30 40 10</p>
             <br>
         </div>
-
-        <div></div>
-
     </footer>
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const id = urlParams.get("id");
-
-        // const header = document.querySelector("header h1");
         let kunstnere;
+
         const medieurl = "https://music-15e1.restdb.io/media/";
         const myHeaders = {
             "x-apikey": "602e6d4d5ad3610fb5bb6329"
         }
 
+        /* loader JSON når DOM er loadet */
         console.log("ID", id);
         document.addEventListener("DOMContentLoaded", loadJSON);
 
+        /* loader JSON */
         async function loadJSON() {
             console.log("loadJSON");
             const JSONData = await fetch(`https://music-15e1.restdb.io/rest/music/${id}`, {
@@ -134,6 +122,7 @@
             visKunstnere(kunstnere);
         }
 
+        /* kopiere data ud på side */
         function visKunstnere() {
             document.querySelector(".billede").src = medieurl + kunstnere.img
             document.querySelector(".spotify").href = kunstnere.spotify;
@@ -147,6 +136,7 @@
             document.querySelector("button").addEventListener("click", tilbageTilForside);
         }
 
+        /* tryk på knap sender bruger tilbage t. forside */
         function tilbageTilForside() {
             console.log("tilbageTilForside");
             history.back();

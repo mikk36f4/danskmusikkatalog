@@ -1,19 +1,15 @@
-/* Database + API | Promise*/
+/* Database Promise + API Key*/
 const medieurl = "https://music-15e1.restdb.io/media/";
 const myHeaders = {
     "x-apikey": "602e6d4d5ad3610fb5bb6329"
 }
 
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get("id")
-
 /* Kører funktionen "start" når DOM er loadet */
 document.addEventListener("DOMContentLoaded", start)
 let kunstnere;
-/* Nulstiller Genre | Viser alle genre */
 let filtrer = "alle";
 
-
+/*loader JSON | kører funktion til at filtere kunstnere*/
 function start() {
     console.log("start");
     const filtrerKnapper = document.querySelectorAll("nav button");
@@ -21,15 +17,7 @@ function start() {
     loadJSON();
 }
 
-function filtrerKunstnere() {
-    console.log("filtrerKunstnere");
-    filtrer = this.dataset.genre;
-    document.querySelector(".valgt").classList.remove("valgt");
-    this.classList.add("valgt");
-    visKunstnere();
-    header.textContent = this.textContent;
-}
-
+/* Henter JSON */
 async function loadJSON() {
     console.log("loadJSON");
     const JSONData = await fetch("https://music-15e1.restdb.io/rest/music", {
@@ -40,6 +28,16 @@ async function loadJSON() {
     visKunstnere();
 }
 
+/* filtrer kunstnere efter genre */
+function filtrerKunstnere() {
+    console.log("filtrerKunstnere");
+    filtrer = this.dataset.genre;
+    document.querySelector(".valgt").classList.remove("valgt");
+    this.classList.add("valgt");
+    visKunstnere();
+}
+
+/* kloner data ud på siden */
 function visKunstnere() {
     console.log("visKunstnere");
     const destination = document.querySelector("#liste");
@@ -61,6 +59,7 @@ function visKunstnere() {
 
 }
 
+/* Sender brugeren til detalje.html ved klik på content */
 function visDetaljer(hvad) {
     console.log("visDetaljer");
     location.href = `detalje.html?id=${hvad._id}`;
